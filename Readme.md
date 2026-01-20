@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Виктория](https://up.htmlacademy.ru/htmlcss-individual/2/user/923723).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
