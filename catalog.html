@@ -35,6 +35,9 @@
             </a>
             <a class="favorites" href="#" title="Избранное">
               <span class="visually-hidden">Избранное</span>
+              <span class="favorites-number">
+                12
+              </span>
             </a>
             <a class="button desire-btn" href="#">
               Хочу сюда!
@@ -113,17 +116,35 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">
               Стоимость, ₽:
             </legend>
-
+            <div class="number-wrapper">
+              <p class="number-field-wrap">
+                <input class="catalog-filter-input catalog-filter-input-price" id="minprice" type="number" name="minprice" value="0" oninput="pricerangemin.value=minprice.value">
+                <label class="catalog-filter-label" for="minprice">
+                  от
+                </label>
+              </p>
+              <p class="number-field-wrap">
+                <input class="catalog-filter-input catalog-filter-input-price" id="maxprice" type="number" name="maxprice" value="9000" oninput="pricerangemax.value=maxprice.value">
+                <label class="catalog-filter-label" for="maxprice">
+                  до
+                </label>
+              </p>
+            </div>
+            <div class="range-wrapper">
+              <input class="catalog-filter-input catalog-filter-input-range" type="range" name="pricerangemin" oninput="minprice.value=pricerangemin.value">
+              <input class="catalog-filter-input catalog-filter-input-range" type="range" name="pricerangemax" oninput="maxprice.value=pricerangemax.value">
+            </div>
           </fieldset>
-          <div class="button-wrap">
+          <div class="buttons-wrap">
             <button class="button catalog-filter-btn" type="submit">
               Применить
             </button>
-            <button class="button catalog-filter-btn catalog-filter-btn-transparent" type="submit">
+            <button class="button catalog-filter-btn catalog-filter-btn-transparent" type="reset">
               Сбросить
             </button>
           </div>
@@ -135,7 +156,31 @@
           Каталог гостиниц
         </h2>
         <div class="catalog-sorting">
-
+          <p class="search-result">
+            Найдено гостиниц: <output name="filter-output">38</output>
+          </p>
+          <select class="sorting-order" name="sorting-order" aria-label="Сортировка">
+            <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="popular">Сначала популярные</option>
+          </select>
+          <ul class="sorting-view-buttons">
+            <li class="sorting-view-item">
+              <a class="sorting-view-button sorting-view-button-tile active" href="catalog.html?view=tile">
+                <span class="visually-hidden">Показать плитками</span>
+              </a>
+            </li>
+            <li class="sorting-view-item">
+              <a class="sorting-view-button sorting-view-button-card" href="catalog.html?view=card">
+                <span class="visually-hidden">Показать карточками</span>
+              </a>
+            </li>
+            <li class="sorting-view-item">
+              <a class="sorting-view-button sorting-view-button-list" href="catalog.html?view=list">
+                <span class="visually-hidden">Показать списком</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <ul class="catalog-list">
           <li class="catalog-card">
@@ -238,7 +283,7 @@
             </div>
           </li>
         </ul>
-        <!-- Pagination -->
+    <!-- Pagination -->
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -253,8 +298,8 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-gap pagination-disabled">
-            <span class="visually-hidden">Разрыв пагинации</span>
+            <a class="pagination-link pagination-more pagination-disabled">
+            <span class="visually-hidden">Ещё страницы</span>
             ...
             </a>
           </li>
@@ -298,7 +343,9 @@
           </a>
         </li>
       </ul>
-      <a class="tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <address class="contact-tel">
+        <a class="tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </address>
       <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="#" alt="логотип Html Academy">
       </a>
