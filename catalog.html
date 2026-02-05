@@ -10,7 +10,7 @@
     <header class="page-header container">
       <nav class="page-navigation">
         <a class="logo" href="index.html">
-          <img src="#" alt="логотип city of sedona" title="city of sedona">
+          <img src="images/logo.svg" width="140" height="70" alt="логотип city of Sedona" title="city of Sedona">
         </a>
         <ul class="menu">
           <li class="menu-item">
@@ -20,7 +20,7 @@
           </li>
           <li class="menu-item">
             <a class="menu-link" href="#">
-              О седоне
+              О Седоне
             </a>
           </li>
           <li class="menu-item">
@@ -65,7 +65,7 @@
           </li>
         </ul>
       <!-- Фильтры -->
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">
               Инфраструктура:
@@ -86,7 +86,7 @@
               <li class="catalog-filter-item">
                 <label class="catalog-filter-label">
                   Wi-Fi
-                  <input class="catalog-filter-input" type="checkbox" name="Wi-Fi">
+                  <input class="catalog-filter-input" type="checkbox" name="wi-fi">
                 </label>
               </li>
             </ul>
@@ -111,7 +111,7 @@
               <li class="catalog-filter-item">
                 <label class="catalog-filter-label">
                   Апартаменты
-                  <input class="catalog-filter-input" type="radio" name="housing-type" value="Apartments">
+                  <input class="catalog-filter-input" type="radio" name="housing-type" value="apartments">
                 </label>
               </li>
             </ul>
@@ -184,32 +184,37 @@
         </div>
         <ul class="catalog-list">
           <li class="catalog-card">
-            <img class="catalog-card-img" src="#" alt="писание картинки">
-            <h3 class="catalog-card-title">
-              Amara Resort & Spa
-            </h3>
-            <p class="catalog-card-content">
-              <span class="catalog-card-housing">Гостиница</span>
-              <span class="catalog-card-price">От 4000 ₽</span>
-            </p>
-            <div class="catalog-card-button-wrap">
+            <a href="#">
+              <img class="catalog-card-img" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="вид из пещеры на звездное небо">
+            </a>
+            <a href="#">
+              <h3 class="catalog-card-title">
+                Amara Resort & Spa
+              </h3>
+            </a>
+            <div class="card-content">
+              <span class="card-text catalog-card-housing">Гостиница</span>
+              <span class="card-text catalog-card-price">От 4000 ₽</span>
               <a class="button catalog-card-btn" href="#">
                 Подробнее
               </a>
-              <button class="button catalog-card-btn catalog-card-btn-favorites" type="button">
+              <button class="button catalog-card-btn catalog-card-add-favorites" type="button">
                 В избранное
               </button>
-            </div>
-            <div class="catalog-card-rating">
-              <span class="rating-stars"></span>
-              <span class="rating-number">
+              <span class="catalog-card-rating-stars">
+                <span class="visually-hidden">четыре звезды</span>
+              </span>
+              <span class="catalog-card-rating-number">
                 Рейтинг: 8,5
               </span>
             </div>
           </li>
 
+
+
+
           <li class="catalog-card">
-            <img class="catalog-card-img" src="#" alt="писание картинки">
+            <img class="catalog-card-img" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="пейзаж с горами, покрытыми лесом, и радугой на фоне облачного неба">
             <h3 class="catalog-card-title">
               Villas at Poco Diablo
             </h3>
@@ -221,12 +226,14 @@
               <a class="button catalog-card-btn" href="#">
                 Подробнее
               </a>
-              <button class="button catalog-card-btn catalog-card-btn-favorites" type="button">
+              <button class="button catalog-card-btn catalog-card-in-favorites" type="button">
                 В избранном
               </button>
             </div>
             <div class="catalog-card-rating">
-              <span class="rating-stars"></span>
+              <span class="rating-stars">
+                <span class="visually-hidden">четыре звезды</span>
+              </span>
               <span class="rating-number">
                 Рейтинг: 9,2
               </span>
@@ -234,7 +241,7 @@
           </li>
 
           <li class="catalog-card">
-            <img class="catalog-card-img" src="#" alt="писание картинки">
+            <img class="catalog-card-img" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="массивная красная гора на фоне голубого неба с облаками, а внизу зеленая растительность">
             <h3 class="catalog-card-title">
               Desert Quail Inn
             </h3>
@@ -251,7 +258,9 @@
               </button>
             </div>
             <div class="catalog-card-rating">
-              <span class="rating-stars"></span>
+              <span class="rating-stars">
+                <span class="visually-hidden">три звезды</span>
+              </span>
               <span class="rating-number">
                 Рейтинг: 6,9
               </span>
@@ -259,7 +268,7 @@
           </li>
 
           <li class="catalog-card">
-            <img class="catalog-card-img" src="#" alt="писание картинки">
+            <img class="catalog-card-img" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="ночной пейзаж с красной скалой под звёздным небом">
             <h3 class="catalog-card-title">
               GreenTree Inn
             </h3>
@@ -276,7 +285,9 @@
               </button>
             </div>
             <div class="catalog-card-rating">
-              <span class="rating-stars"></span>
+              <span class="rating-stars">
+                <span class="visually-hidden">две звезды</span>
+              </span>
               <span class="rating-number">
                 Рейтинг: 5,0
               </span>
@@ -284,7 +295,7 @@
           </li>
         </ul>
     <!-- Pagination -->
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
           </li>
@@ -297,16 +308,14 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-more pagination-disabled">
+          <li class="pagination-item pagination-more">
             <span class="visually-hidden">Ещё страницы</span>
             ...
-            </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
-        </ul>
+        </ol>
       </section>
 <!--  Subscribe Section -->
       <section class="subscription subscription-inner">
@@ -338,7 +347,7 @@
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item-link" href="https://www.youtube.com/user/">
+          <a class="social-item-link" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
@@ -347,7 +356,7 @@
         <a class="tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="#" alt="логотип Html Academy">
+        <img src="images/htmlacademy-logo.svg" width="115" height="33" alt="логотип Html Academy">
       </a>
     </footer>
   </body>
