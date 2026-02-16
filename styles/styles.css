@@ -39,7 +39,12 @@ img {
   overflow: hidden;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0px;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -51,10 +56,17 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.page-main {
+  flex-grow: 1;
 }
 
 .main-index {
@@ -72,10 +84,7 @@ body {
 }
 
 /*Стили для заголовков h2*/
-.advantages-title,
-.offer-title,
-.booking-title,
-.subscription-title {
+.section-title {
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
@@ -86,9 +95,7 @@ body {
 }
 
 /*Стили для заголовков h3*/
-.advantages-item-title,
-.offer-item-title,
-.catalog-card-title {
+.block-title {
   margin-top: 0;
   font-weight: 700;
   font-size: 24px;
@@ -98,10 +105,7 @@ body {
 }
 
 /*Стили для подзаголовков секций*/
-.advantages-subtitle,
-.offer-subtitle,
-.booking-subtitle,
-.subscription-subtitle {
+.section-subtitle {
   margin-top: 0px;
   font-size: 22px;
   line-height: 26px;
@@ -126,21 +130,14 @@ body {
   background-color: #756157;
   text-decoration: none;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
 /*Обнуление отступов у списков*/
-.advantages-list,
-.advantages-description-list,
-.offer-list,
-.social-list,
-.breadcrumbs,
-.sorting-view-buttons,
-.catalog-list,
-.pagination {
+.list-normalize {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 /*HEADER*/
@@ -184,7 +181,7 @@ body {
 .hero {
   margin-bottom: 69px;
   padding: 51px 0 82px 0;
-  background: url(../images/hero-background-mask.svg) no-repeat center bottom / 101%,
+  background: url(../images/hero-background-mask.svg) no-repeat center bottom,
               #4885b7 url(../images/hero-background.jpg) no-repeat center;
 }
 
@@ -216,17 +213,16 @@ body {
   flex-wrap: wrap;
 }
 
-.advantages-description-list li,
 .advantages-item-img {
   display: block;
 }
 
 .advantages-item {
   width: 400px;
-  padding: 103px 85px;
+  padding: 100px 85px;
 }
 
-.advantages-section:nth-child(odd) .advantages-item {
+.advantages-section:nth-child(odd) {
   color: #ffffff;
   background-color: #82b3d3;
 }
@@ -277,7 +273,6 @@ body {
 }
 
 .offer-item {
-  display: block;
   width: 400px;
   padding: 183px 85px 81px 85px;
   background-repeat: no-repeat;
@@ -367,7 +362,6 @@ body {
   border-radius: 4px 0 0 4px;
   background: #f2f2f2;
   border: none;
-  outline: none;
 }
 
 .subscription-form input::placeholder {
@@ -392,10 +386,6 @@ body {
   color: #000;
 }
 
-.social-item {
-  display: block;
-}
-
 .tel {
   font-size: 40px;
   font-style: normal;
@@ -404,7 +394,6 @@ body {
   color: inherit;
   text-decoration: none;
 }
-
 
 /*INTRO*/
 
@@ -492,7 +481,6 @@ body {
   line-height: 21px;
   color: inherit;
   background: #ffffff;
-  outline: none;
 }
 
 .catalog-list {
@@ -551,10 +539,6 @@ body {
 
 .pagination {
   display: flex;
-}
-
-.pagination-item {
-  display: block;
 }
 
 .pagination-link {
